@@ -21,4 +21,3 @@ Täiustage tunnis tehtud näidisrakendust omalt poolt 3-4 funktsionaalsusega. Fu
 
 **Kodutöö esitamine käib githubis tehes sellest repost fork-i ja seejärel pull requesti, kui kodutöö on valmis. **
 
-
