@@ -1,0 +1,27 @@
+<p style="font-size: 20px; font-weight:600">Kirjuta meile.</p>
+
+<form [formGroup]='messageForm' (ngSubmit)='onSubmit()'>
+    
+    
+
+    <label>
+        Nimi:
+        <input type='text' formControlName='name'>
+        <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+            <div *ngIf="messageForm.controls.name.errors.required">Teie nimi on n6utud</div>
+        </div>
+    </label>
+    <label>
+        S6num:
+        <textarea formControlName='message'></textarea>
+        <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+            <div *ngIf="messageForm.controls.message.errors.required">Sisestage s6numi sisu!</div>
+        </div>
+    </label>
+
+    <input type="submit" value="Vajuta mind" class="cta">
+
+    <h5 *ngIf='success'>Korrektne</h5>
+
+</form>
+
