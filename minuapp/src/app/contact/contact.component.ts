@@ -12,7 +12,6 @@ export class ContactComponent implements OnInit {
   submitted = false;
   success = false;
 
-
  constructor(private formBuilder: FormBuilder) { }
 
  ngOnInit() {
@@ -26,11 +25,9 @@ export class ContactComponent implements OnInit {
     this.submitted = true;
 
     if(this.messageForm.invalid){
+      this.success = false;
       return;
     }
-
     this.success = true;
-
   }
-
 }

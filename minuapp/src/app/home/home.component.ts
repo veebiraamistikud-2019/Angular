@@ -10,14 +10,10 @@ export class HomeComponent implements OnInit {
   h1Style: boolean = false;
   
   firstClick() {
-    this.h1Style = true;
+    this.h1Style = !this.h1Style;
   }
 
-
-  
-
   constructor() { }
-
   ngOnInit() {
   }
 
