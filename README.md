@@ -2,7 +2,10 @@
 https://angular.io
 
 Projekti teema valisin ise, ei teinud esitluse põhjal.
-
+\
+\
+\
+\
 teisipäevase grupi tunnis tehtud näide: https://github.com/veebiraamistikud-2019/Angular/pull/1
 
 neljapäevase grupi tunnis tehtud näide: https://github.com/veebiraamistikud-2019/Angular/pull/2
