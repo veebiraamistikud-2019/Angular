@@ -11,6 +11,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { GameComponent } from './game/game.component';
 import { CellComponent } from './cell/cell.component';
+import { SliderComponent } from './slider/slider.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { CellComponent } from './cell/cell.component';
     ContactComponent,
     HomeComponent,
     GameComponent,
-    CellComponent
+    CellComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
