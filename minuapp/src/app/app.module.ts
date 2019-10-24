@@ -13,6 +13,7 @@ import { GameComponent } from './game/game.component';
 import { CellComponent } from './cell/cell.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FacebookModule } from 'ngx-facebook';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    SlickCarouselModule
+    SlickCarouselModule, 
+    FacebookModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
