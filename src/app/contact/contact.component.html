@@ -1,0 +1,26 @@
+<p style="font-size: 20px; font-weight:600">Write to us:</p>
+
+<form [formGroup]='messageForm' (ngSubmit)='onSubmit()'>
+    
+    
+
+    <label>
+        Name:
+        <input type='text' formControlName='name'>
+        <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+            <div *ngIf="messageForm.controls.name.errors.required">Name is needed</div>
+        </div>
+    </label>
+    <label>
+        Text:
+        <textarea formControlName='message'></textarea>
+        <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+            <div *ngIf="messageForm.controls.message.errors.required">Text is needed!</div>
+        </div>
+    </label>
+
+    <input type="submit" value="Send" class="cta">
+
+    <h5 *ngIf='success'>Message sent</h5>
+
+</form>
