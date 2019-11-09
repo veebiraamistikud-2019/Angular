@@ -1,0 +1,37 @@
+<div class = 'container'>
+    <div class = 'header'>
+        To do list
+    </div>
+    
+    <div class = 'items'>
+        <div *ngIf = 'items.length > 0; else elseBlock'>
+            <div class = 'item' *ngFor = 'let item of items'>
+                
+                <div
+                    class = '{{ item.done ? "itemValueCrossed" : "itemValue" }}'
+                    (click) = '_checkItem(item.id)'>
+                        {{item.value}}
+                </div>
+                
+                <button
+                    class = 'removeItemButton'
+                    (click) = '_removeItem(item.id)'>
+                        -
+                </button>
+            </div>
+        </div>
+        <ng-template #elseBlock>
+            <div class = 'noItems'>
+                No items to display
+            </div>
+        </ng-template>
+    </div>
+
+    <input
+        class = 'inputField'
+        type = 'text'
+        placeholder = 'Write new item and hit Enter'
+        [(ngModel)] = 'input'
+        (keyup.enter) = '_createNewItem()'
+    />
+</div>
