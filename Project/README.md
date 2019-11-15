@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 
+## Kommentaar
+
+Projekt on tehtud kasutades [Edureka tutoriale part 1-3](https://www.youtube.com/watch?v=ElbPIhPNp_s). Rakenduses on võimalik liikuda ringi, eriliselt midagi muud teha ei saa. Shopping listis saab addida komponente, kuid peale seda tehakse lehele refresh ehk ära ei salvestata.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
