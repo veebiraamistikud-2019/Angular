@@ -1,4 +1,4 @@
-<img src="pilt.png" width="350" title="projektipilt">
+<img src="pilt.png" width="750" title="projektipilt">
 
 # Kert Tamm Angular Iseseisev Töö
 
