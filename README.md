@@ -1,24 +1,27 @@
-# Angular
-https://angular.io
+# Minuapp
 
-teisipäevase grupi tunnis tehtud näide: https://github.com/veebiraamistikud-2019/Angular/pull/1
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
-neljapäevase grupi tunnis tehtud näide: https://github.com/veebiraamistikud-2019/Angular/pull/2
+## Development server
 
-# kodutöö kirjeldus
-Täiustage tunnis tehtud näidisrakendust omalt poolt 3-4 funktsionaalsusega. Funktsionaalsused võivad olla vabalt valitud. Soovi korral võib kodutöö teha teise grupi näidisrakendusele või teha täiesti enda näidisrakenduse. Pakun ette ka mõned näidis funktsionaalsused:
-**teisipäevane grupp näidis funktsionaalsused:**
-* Livechat
-* Piltide slaider, kuhu saab pilte juurde laadida
-* Kergem mäng veebilehele (N: trips-traps-trull).
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-**neljapäevane grupp näidis funktsionaalsused:**
-* ToDo rakendusele kategooriate lisamine.
-* ToDo rakendusele tähtaegade lisamine ja nende järgi sorteerimine. 
-* Timer, mis salvestab aega, mis kulus ülesande tegemiseks.
-* Kalendrivaade.
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-**Kodutöö esitamine käib githubis tehes sellest repost fork-i ja seejärel pull requesti, kui kodutöö on valmis.**
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
