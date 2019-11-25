@@ -1,4 +1,6 @@
-# Minuapp
+<img src="pilt.png" width="350" title="projektipilt">
+
+# Kert Tamm Angular Iseseisev Töö
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
