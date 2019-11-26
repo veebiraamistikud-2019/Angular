@@ -1,0 +1,33 @@
+
+<div class="score-board">
+  <br>
+  <div class="badge" id="user-label">user : {{userSelected}}</div>
+  <div class="badge" id="comp-label">comp : {{compSelected}}</div>
+  <br>
+  <span id="user-score">{{userScore}}</span>:<span id="comp-score">{{compScore}}</span>
+  <p id="action-message" *ngIf="!status">user move</p>
+  <p id="action-message" *ngIf="status">wait...</p>
+  
+  
+</div>
+
+<div class="result">
+  <p *ngIf="status">{{userSelected}} {{action}} {{compSelected}}{{status}} </p>
+</div>
+
+<div class="choices">
+  <h3>Choose your weapon:</h3>
+  <div class="choice" id="rock">
+    <p (click)='userPick("rock")'>Rock</p>
+  </div>
+  <div class="choice" id="paper">
+    <p (click)='userPick("paper")'>Paper</p>
+  </div>
+  <div class="choice" id="scissors">
+    <p (click)='userPick("scissors")'>Scissors</p>
+    
+  </div>
+  
+</div>
+<button class="btn-clear" (click)='clearResult()' >Reset score</button>
+
