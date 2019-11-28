@@ -27,3 +27,29 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Angular - Kert Tamm 1.tunnitöö
+
+<img src="naide1.png" width="350" title="projektipilt1">
+
+GITHUB demo link: https://github.com/egertpiksar/Angular
+
+installida kõige viimasem node.js versioon: https://nodejs.org/en/
+
+**npm install -g @angular/cli**
+
+**npm install --save-dev @angular-devkit/build-angular
+
+**ng new minuapp**
+
+stylesheetiks sai valitud CSS
+
+tuleb minna vastavasse kausta kuhu angular app sai paigaldatud
+
+**cd minuapp**
+
+**ng serve --open**
+
+kui kõik on õigesti tehtud siis peaks compilimise lõpuks avanema leht automaatselt aadressiga http://localhost:4200/
+
+**NB! enne githubi üleslaadimist lisada .gitignore faili vastavad angular gitignore’d et ei laetaks üles paarsada mb angulari enda faile**
