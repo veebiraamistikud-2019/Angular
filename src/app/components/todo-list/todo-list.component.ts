@@ -41,19 +41,19 @@ export class TodoListComponent implements OnInit {
     this.todos = [
       {
         'id': 1,
-        'title': 'Finish Angular Screencast',
+        'title': 'Pahtelda elutuba.',
         'completed': false,
         'editing': false,
       },
       {
         'id': 2,
-        'title': 'Take over world',
+        'title': 'Lõpeta C++ kodused ülesanded.',
         'completed': false,
         'editing': false,
       },
       {
         'id': 3,
-        'title': 'One more thing',
+        'title': 'Tee Windowsi puhas paigaldus.',
         'completed': false,
         'editing': false,
       },

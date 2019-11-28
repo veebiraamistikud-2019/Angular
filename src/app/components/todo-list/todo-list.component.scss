@@ -80,7 +80,7 @@ button {
 }
 
 .active {
-  background: lightgreen;
+  background: steelblue;
 }
 
 // CSS Transitions
@@ -91,3 +91,30 @@ button {
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  //vertical-align:middle;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active-menu-item) {
+  background-color: #111;
+}
+
