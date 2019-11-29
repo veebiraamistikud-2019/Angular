@@ -27,6 +27,7 @@ export class TodoListComponent implements OnInit {
   idForTodo: number;
   beforeEditCache: string;
   filter: string;
+  group: string;
   anyRemainingModel: boolean;
 
 
@@ -44,18 +45,30 @@ export class TodoListComponent implements OnInit {
         'title': 'Pahtelda elutuba.',
         'completed': false,
         'editing': false,
+
+        'homeRenovation': true,
+        'schoolwork'    : false,
+        'projects'      : false,
       },
       {
         'id': 2,
         'title': 'Lõpeta C++ kodused ülesanded.',
         'completed': false,
         'editing': false,
+
+        'homeRenovation': false,
+        'schoolwork'    : true,
+        'projects'      : false,
       },
       {
         'id': 3,
         'title': 'Tee Windowsi puhas paigaldus.',
         'completed': false,
         'editing': false,
+
+        'homeRenovation': false,
+        'schoolwork'    : false,
+        'projects'      : true,
       },
     ];
   }
@@ -69,7 +82,11 @@ export class TodoListComponent implements OnInit {
       id: this.idForTodo,
       title: this.todoTitle,
       completed: false,
-      editing: false
+      editing: false,
+      
+      homeRenovation: (this.group === 'homeRenovation'),
+      schoolwork    : (this.group === 'schoolwork'),
+      projects      : (this.group === 'projects'),
     })
 
     this.todoTitle = '';
@@ -128,8 +145,28 @@ export class TodoListComponent implements OnInit {
     } else if (this.filter === 'completed') {
       return this.todos.filter(todo => todo.completed);
     }
-
     return this.todos;
+  }
+
+  todosGrouped(x:Todo[]): Todo[]
+  {
+    if (this.group ==='all')
+    {
+      return x;
+    }
+    else if (this.group === 'homeRenovation') 
+    {
+      return x.filter(todo => todo.homeRenovation);
+    }
+    else if (this.group === 'schoolwork') 
+    {
+      return x.filter(todo => todo.schoolwork);
+    }
+    else if (this.group === 'projects') 
+    {
+      return x.filter(todo => todo.projects);
+    }
+    return x;
   }
 
 }
