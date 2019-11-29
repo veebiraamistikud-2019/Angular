@@ -7,4 +7,5 @@ export interface Todo
   homeRenovation: boolean,
   schoolwork	: boolean,
   projects		: boolean,
+  deadline		: string,
 }

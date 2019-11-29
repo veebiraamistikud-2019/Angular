@@ -26,9 +26,11 @@ export class TodoListComponent implements OnInit {
   todoTitle: string;
   idForTodo: number;
   beforeEditCache: string;
-  filter: string;
-  group: string;
+  filter: string;  
   anyRemainingModel: boolean;
+
+  group: string;
+  deadline :string;
 
 
   constructor() { }
@@ -49,6 +51,8 @@ export class TodoListComponent implements OnInit {
         'homeRenovation': true,
         'schoolwork'    : false,
         'projects'      : false,
+
+        'deadline'      : "2019-10-30",
       },
       {
         'id': 2,
@@ -59,6 +63,8 @@ export class TodoListComponent implements OnInit {
         'homeRenovation': false,
         'schoolwork'    : true,
         'projects'      : false,
+
+        'deadline'      : "2019-10-30",
       },
       {
         'id': 3,
@@ -69,24 +75,31 @@ export class TodoListComponent implements OnInit {
         'homeRenovation': false,
         'schoolwork'    : false,
         'projects'      : true,
+
+        'deadline'      : "2019-10-30",
       },
     ];
   }
 
   addTodo(): void {
-    if (this.todoTitle.trim().length === 0) {
+    if (this.todoTitle.trim().length === 0 || 
+        this.deadline.trim().length === 0) 
+    {
       return;
     }
 
-    this.todos.push({
-      id: this.idForTodo,
-      title: this.todoTitle,
-      completed: false,
-      editing: false,
+    this.todos.push(
+    {
+      id            : this.idForTodo,
+      title         : this.todoTitle,
+      completed     : false,
+      editing       : false,
       
       homeRenovation: (this.group === 'homeRenovation'),
       schoolwork    : (this.group === 'schoolwork'),
       projects      : (this.group === 'projects'),
+
+      deadline      : this.deadline,
     })
 
     this.todoTitle = '';
