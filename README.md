@@ -1,24 +1,57 @@
-# Angular
-https://angular.io
+<img src="pilt.png" width="750" title="projektipilt">
 
-teisipäevase grupi tunnis tehtud näide: https://github.com/veebiraamistikud-2019/Angular/pull/1
+# Kert Tamm Angular Iseseisev Töö
 
-neljapäevase grupi tunnis tehtud näide: https://github.com/veebiraamistikud-2019/Angular/pull/2
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
-# kodutöö kirjeldus
-Täiustage tunnis tehtud näidisrakendust omalt poolt 3-4 funktsionaalsusega. Funktsionaalsused võivad olla vabalt valitud. Soovi korral võib kodutöö teha teise grupi näidisrakendusele või teha täiesti enda näidisrakenduse. Pakun ette ka mõned näidis funktsionaalsused:
-**teisipäevane grupp näidis funktsionaalsused:**
-* Livechat
-* Piltide slaider, kuhu saab pilte juurde laadida
-* Kergem mäng veebilehele (N: trips-traps-trull).
+## Development server
 
-**neljapäevane grupp näidis funktsionaalsused:**
-* ToDo rakendusele kategooriate lisamine.
-* ToDo rakendusele tähtaegade lisamine ja nende järgi sorteerimine. 
-* Timer, mis salvestab aega, mis kulus ülesande tegemiseks.
-* Kalendrivaade.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-**Kodutöö esitamine käib githubis tehes sellest repost fork-i ja seejärel pull requesti, kui kodutöö on valmis.**
 
+# Angular - Kert Tamm tunnis tehtud
 
+<img src="naide1.png" width="350" title="projektipilt1">
+
+GITHUB demo link: https://github.com/egertpiksar/Angular
+
+installida kõige viimasem node.js versioon: https://nodejs.org/en/
+
+**npm install -g @angular/cli**
+
+**npm install --save-dev @angular-devkit/build-angular
+
+**ng new minuapp**
+
+stylesheetiks sai valitud CSS
+
+tuleb minna vastavasse kausta kuhu angular app sai paigaldatud
+
+**cd minuapp**
+
+**ng serve --open**
+
+kui kõik on õigesti tehtud siis peaks compilimise lõpuks avanema leht automaatselt aadressiga http://localhost:4200/
+
+**NB! enne githubi üleslaadimist lisada .gitignore faili vastavad angular gitignore’d et ei laetaks üles paarsada mb angulari enda faile**
