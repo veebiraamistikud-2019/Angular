@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Book App</h1>
+
+  <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Add a new modal</button>
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add a new book</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <form [formGroup]="angForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Title:</label>
+          <input class="form-control" formControlName="title" type="text">
+        </div>
+        
+        <div class="form-group">
+          <label>Author:</label>
+          <input class="form-control" formControlName="author" type="text">
+        </div>
+       
+        <div class="form-group">
+          <label>Progress:</label>
+          <input class="form-control" formControlName="progress" type="text">
+        </div>
+
+        <div class="form-group">
+          <label>Notes:</label>
+          <input class="form-control" formControlName="notes" type="text">
+        </div>
+
+        <button type="submit"
+            [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+            Save
+        </button>
+    </form>
+    <p>Form value: {{ angForm.value | json }}</p>
+
+  </div>
+  <div class="modal-footer">
+  </div>
+</ng-template>
+  <app-booklist [message] = "message"></app-booklist>
+</body>
+</html>
