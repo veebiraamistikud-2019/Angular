@@ -1,0 +1,82 @@
+<img class="logo" width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+
+
+<ul>
+  <li><a [ngClass]="{'active': group === 'homeRenovation'}" (click)="group='homeRenovation'">Remont</a></li>
+  <li><a [ngClass]="{'active': group === 'schoolwork'}" (click)="group='schoolwork'">Koolitöö</a></li>
+  <li><a [ngClass]="{'active': group === 'projects'}" (click)="group='projects'">Projektid</a></li>
+
+  <li style="float:right"><a [ngClass]="{'active': group === 'all'}" (click)="group='all'">Kõik</a></li>
+</ul>
+
+
+
+<div *ngIf="group === 'homeRenovation' ||
+            group === 'schoolwork' ||
+            group === 'projects' ; else substitute"
+   style="float:left;width:60%;">
+
+  <input type="text" class="todo-input" placeholder="Mis on vaja ära teha?"       [(ngModel)]="todoTitle" 
+
+          (keyup.enter)="addTodo()">
+</div>
+
+<ng-template #substitute>
+    <p style="font-size: 16px">Ülesande lisamiseks vali kategooria. Kinnitamiseks ENTER ühes sisestuskastis.</p>
+</ng-template>
+
+
+<div *ngIf="group === 'homeRenovation' ||
+            group === 'schoolwork' ||
+            group === 'projects' "
+    style="float:right;width:40%;">
+  
+  <input id="deadline" name="deadline" 
+        [(ngModel)]="deadline"
+        type="date" class="todo-input"
+
+        (keyup.enter)="addTodo()" />
+</div>
+
+<div *ngIf="group === 'homeRenovation' ||
+            group === 'schoolwork' ||
+            group === 'projects' "
+    style="clear:both;"></div>
+
+
+<div class="todo-item" *ngFor="let todo of todosGrouped(todosFiltered())" @fade>
+  <div class="todo-item-left">
+
+    <input type="checkbox" [(ngModel)]="todo.completed" (change)="doneEdit(todo)">
+    <div class="remove-item" (click)="deleteTodo(todo.id)">
+    &times;
+  </div>
+
+    <div *ngIf="!todo.editing; else editingTodo" class="todo-item-label" [ngClass]="{ 'completed' : todo.completed }" (dblclick)="editTodo(todo)">{{ todo.title }}</div>
+    <ng-template #editingTodo>
+      <input type="text" class="todo-item-edit" [(ngModel)]="todo.title" (blur)="doneEdit(todo)" (keyup.enter)="doneEdit(todo)" (keyup.esc)="cancelEdit(todo)"autofocus>
+    </ng-template>    
+
+  </div>
+  
+  <div class="date-item">{{ todo.deadline }}</div>
+
+</div>
+
+<div class="extra-container">
+  <div><label><input type="checkbox" (change)="checkAllTodos()"  [(ngModel)]="!anyRemainingModel"> Vali kõik</label></div>
+  <div *ngIf="group === 'all'">{{ remaining() }} ülesannet veel</div>
+</div>
+
+<div class="extra-container">
+  <div>
+    <button [ngClass]="{'active': filter === 'all'}" (click)="filter='all'">Kõik</button>
+    <button [ngClass]="{'active': filter === 'active'}" (click)="filter='active'">Teha</button>
+    <button [ngClass]="{'active': filter === 'completed'}" (click)="filter='completed'">Tehtud</button>
+  </div>
+
+  <div *ngIf="atLeastOneCompleted()">
+    <button (click)="clearCompleted()">Kustuta tehtud</button>
+  </div>
+
+</div>
